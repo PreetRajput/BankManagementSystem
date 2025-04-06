@@ -1,0 +1,41 @@
+﻿<Page x:Class="first.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:first"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page1">
+
+    <Grid Background="AliceBlue">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+           
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+
+
+        <TextBlock Text="Bank" Grid.Row="0" Grid.ColumnSpan="3" Background="Gray" FontSize="20" FontFamily="./Fonts/#Oswald" TextAlignment="Center"/>
+        <TextBlock Text="Please Select Your Transaction" Grid.Row="2"  Grid.ColumnSpan="3"  FontSize="20" FontFamily="./Fonts/#Doto" HorizontalAlignment="Center" />
+
+        <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Vertical" >
+                    <Button Content="Deposit Money" Margin= "10,10,0,0" FontSize= "20"  Click= "depositMoney"/>
+                    <Button Content="WithDraw Money" Margin="10,10,0,0" FontSize= "20" Click= "withdrawMoney"/>
+                    <Button Content="Check Balance" Margin= "10,10,0,0" FontSize= "20"  Click= "checkBal"/>
+                    <Button Content="User Info" Margin=     "10,10,0,0" FontSize= "20"  Click= "userInfo"/>
+                    <Button Content="Apply Hand Sanitizer on Preet's hand" Margin= "10,10,0,0" FontSize= "20" Click="sanitizeHand" />
+                    <Button Content="Exit" Margin= "10,10,0,0" FontSize= "20" Click="exit"/>
+            
+        </StackPanel>
+        
+        <Frame   x:Name="MainFrame" NavigationUIVisibility="Hidden" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="1"/>
+    </Grid>
+</Page>

@@ -1,0 +1,39 @@
+﻿<Page x:Class="first.UserControl1"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:first"
+             mc:Ignorable="d" 
+             Height="600" Width="600">
+    <Grid Background="White" Name="InfoPage">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="20*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right">
+    Enter AccountNum
+        </TextBlock>
+        <TextBlock Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right">
+    Enter Password
+        </TextBlock>
+
+        <TextBox Grid.Row="2" Grid.Column="2" HorizontalAlignment="Center" Width="200" Name="accNum"/>
+        <PasswordBox Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center" Width="200" Name="pass"/>
+        <Button Grid.Row="6" Grid.Column="2" Content="Next" Width="50" HorizontalAlignment="Right" Click="lobby"/>
+        <Button Grid.Column="3" Content="Sign Up" Click="Button_Click"/>
+    </Grid>
+</Page>
